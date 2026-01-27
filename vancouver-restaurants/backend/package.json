@@ -1,0 +1,27 @@
+{
+    "name": "vancouver-restaurants-backend",
+    "version": "1.0.0",
+    "description": "Backend server for Vancouver restaurant map app",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "restaurants",
+        "map",
+        "vancouver",
+        "api"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.6",
+        "express": "^4.22.1",
+        "pg": "^8.17.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
