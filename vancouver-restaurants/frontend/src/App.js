@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import "leaflet/dist/leaflet.css";
+import Map from "./components/Map";
+
 
 function App() {
     const [restaurants, setRestaurants] = useState([]);
@@ -10,19 +13,9 @@ function App() {
             .then(data => setRestaurants(data)) // save to state
             .catch(err => console.error("Error fetching restaurants:", err));
     }, []);
+    
+    return <Map restaurants={restaurants} />;
 
-    return (
-        <div>
-            <h1>Restaurants</h1>
-            <ul>
-                {restaurants.map(r => (
-                    <li key={r.id}>
-                        {r.name} - {r.cuisine} - {r.price_range}
-                    </li>
-                ))}
-            </ul>
-        </div>
-      );
 
 }
 
