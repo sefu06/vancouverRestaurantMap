@@ -12,7 +12,7 @@ const PORT = 5001;
 //PostgreSQL pool Connection
 const pool = new Pool({
     user: "selinafu", 
-    hose: "localhost", 
+    host: "localhost", 
     database: "vancouver_restaurants",
     password: "",
     port: 5432

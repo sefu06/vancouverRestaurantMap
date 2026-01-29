@@ -8,9 +8,12 @@ function App() {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/restaurants")
+        fetch("http://localhost:5001/restaurants")
             .then(response => response.json())  // parse JSON
-            .then(data => setRestaurants(data)) // save to state
+            .then(data => {
+                console.log("Fetched restaurants:", data);
+                setRestaurants(data);
+              })
             .catch(err => console.error("Error fetching restaurants:", err));
     }, []);
     
