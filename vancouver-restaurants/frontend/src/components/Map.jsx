@@ -1,4 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import defaultIcon from "./LeafletIcon";
 
 export default function Map({ restaurants }) {
   return (
@@ -13,7 +14,11 @@ export default function Map({ restaurants }) {
       />
 
       {restaurants.map(r => (
-        <Marker key={r.id} position={[r.latitude, r.longitude]}>
+          <Marker
+              key={r.id}
+              position={[r.latitude, r.longitude]}
+              icon={defaultIcon} 
+          >
           <Popup>
             <strong>{r.name}</strong><br />
             {r.cuisine}<br />
